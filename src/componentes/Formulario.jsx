@@ -4,7 +4,7 @@ import CampoTexto from "./CampoTexto";
 import "./Formulario.css";
 import ListaSuspensa from "./ListaSuspensa";
 
-const Formulario = () => {
+const Formulario = (props) => {
   const lanes = ["Top", "Mid", "Jungle", "ADC", "Suporte"];
 
   const [nome, setNome] = useState("");
@@ -14,7 +14,12 @@ const Formulario = () => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    console.log(nome, elo, imagem, lane);
+    props.aoNovoJogadorAdicionado({
+      nome,
+      elo,
+      imagem,
+      lane,
+    });
   };
 
   return (
