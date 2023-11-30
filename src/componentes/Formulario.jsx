@@ -5,8 +5,6 @@ import "./Formulario.css";
 import ListaSuspensa from "./ListaSuspensa";
 
 const Formulario = (props) => {
-  const lanes = ["Top", "Mid", "Jungle", "ADC", "Suporte"];
-
   const [nome, setNome] = useState("");
   const [elo, setElo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -40,7 +38,7 @@ const Formulario = (props) => {
         />
         <ListaSuspensa
           label="Lane"
-          itens={lanes}
+          itens={props.times}
           valor={lane}
           aoAlterado={(valor) => setLane(valor)}
         />
