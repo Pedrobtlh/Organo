@@ -10,4 +10,10 @@
   border-radius: 20px;
   padding: 36px 64px;
   box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.08);
+  background-color: #0097b2;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

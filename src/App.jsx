@@ -36,9 +36,8 @@ function App() {
   ];
 
   const [jogadores, setJogadores] = useState([]);
-
+  debugger;
   const aoNovoJogadorAdicionado = (jogador) => {
-    console.log(jogador);
     setJogadores([...jogadores, jogador]);
   };
 
@@ -56,7 +55,7 @@ function App() {
           nome={time.nome}
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
-          jogadores={jogadores}
+          jogadores={jogadores.filter((jogador) => jogador.lane === time.nome)}
         />
       ))}
     </div>

@@ -18,6 +18,10 @@ const Formulario = (props) => {
       imagem,
       lane,
     });
+    setNome("");
+    setElo("");
+    setLane("");
+    setImagem("");
   };
 
   return (
