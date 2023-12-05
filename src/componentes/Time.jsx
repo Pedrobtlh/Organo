@@ -1,4 +1,4 @@
-import Jogador from "../Jogador";
+import Jogador from "./Jogador";
 import "./Time.css";
 
 const Time = (props) => {
@@ -10,15 +10,18 @@ const Time = (props) => {
       >
         <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
         <div className="jogadores">
-          {props.jogadores.map((jogador) => (
-            <Jogador
-              key={jogador.nome}
-              nome={jogador.nome}
-              elo={jogador.elo}
-              imagem={jogador.imagem}
-              corDeFundo={props.corPrimaria}
-            />
-          ))}
+          {props.jogadores.map((jogador) => {
+            return (
+              <Jogador
+                key={jogador.nome}
+                nome={jogador.nome}
+                elo={jogador.elo}
+                imagem={jogador.imagem}
+                corDeFundo={props.corPrimaria}
+                aoDeletar={props.aoDeletar}
+              />
+            );
+          })}
         </div>
       </section>
     )

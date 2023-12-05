@@ -36,10 +36,14 @@ function App() {
   ];
 
   const [jogadores, setJogadores] = useState([]);
-  debugger;
+
   const aoNovoJogadorAdicionado = (jogador) => {
     setJogadores([...jogadores, jogador]);
   };
+
+  function deletarJogador() {
+    console.log("Deletando Colaborador");
+  }
 
   return (
     <div className="app">
@@ -56,6 +60,7 @@ function App() {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           jogadores={jogadores.filter((jogador) => jogador.lane === time.nome)}
+          aoDeletar={deletarJogador}
         />
       ))}
     </div>
