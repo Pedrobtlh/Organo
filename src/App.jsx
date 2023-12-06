@@ -7,33 +7,28 @@ import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 
 function App() {
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Top",
-      corPrimaria: "#57c278",
-      corSecundaria: "#d9f7e9",
+      cor: "#57c278",
     },
     {
       nome: "Mid",
-      corPrimaria: "#82CFFA",
-      corSecundaria: "#E8F8FF",
+      cor: "#82CFFA",
     },
     {
       nome: "Jungle",
-      corPrimaria: "#A6D157",
-      corSecundaria: "#F0F8E2",
+      cor: "#A6D157",
     },
     {
       nome: "ADC",
-      corPrimaria: "#E06869",
-      corSecundaria: "#FDE7E8",
+      cor: "#E06869",
     },
     {
       nome: "Suporte",
-      corPrimaria: "#DB6EBF",
-      corSecundaria: "#F0F8E2",
+      cor: "#DB6EBF",
     },
-  ];
+  ]);
 
   const [jogadores, setJogadores] = useState([]);
 
@@ -43,6 +38,17 @@ function App() {
 
   function deletarJogador() {
     console.log("Deletando Colaborador");
+  }
+
+  function mudarCorDoTime(cor, nome) {
+    setTimes(
+      times.map((time) => {
+        if (time.nome === nome) {
+          time.cor = cor;
+        }
+        return time;
+      })
+    );
   }
 
   return (
@@ -55,10 +61,10 @@ function App() {
 
       {times.map((time) => (
         <Time
+          mudarCor={mudarCorDoTime}
           key={time.nome}
           nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          cor={time.cor}
           jogadores={jogadores.filter((jogador) => jogador.lane === time.nome)}
           aoDeletar={deletarJogador}
         />
