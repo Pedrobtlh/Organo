@@ -13,7 +13,7 @@ const Time = (props) => {
         }}
       >
         <input
-          onChange={(evento) => props.mudarCor(evento.target.value, props.nome)}
+          onChange={(evento) => props.mudarCor(evento.target.value, props.id)}
           type="color"
           className="input-cor"
           value={props.cor}
@@ -24,6 +24,7 @@ const Time = (props) => {
             return (
               <Jogador
                 key={jogador.nome}
+                id={jogador.id}
                 nome={jogador.nome}
                 elo={jogador.elo}
                 imagem={jogador.imagem}
