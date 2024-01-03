@@ -1,8 +1,19 @@
-# React + Vite
+# Organo - Organizador de Times de League of Legends
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao Organo, o seu organizador de times dedicado ao universo do League of Legends. Desenvolvido com React, o Organo oferece uma plataforma intuitiva para gerenciar e otimizar a experiência do seu time.
 
-Currently, two official plugins are available:
+## Funcionalidades Principais
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Organização Efetiva de Times
+Organize seu time de League of Legends de forma eficiente, mantendo informações importantes sobre cada jogador em um único local.
+
+### 2. Excluir Jogador
+Remova jogadores da sua equipe com facilidade. Uma funcionalidade essencial para manter a coesão e a eficácia do time.
+
+### 3. Editar Cores
+Personalize a aparência do seu time ajustando as cores conforme sua preferência. Dê uma identidade única ao seu grupo.
+
+## Tecnologias Utilizadas
+
+- **React:**
+  O Organo é construído utilizando o poderoso framework React, proporcionando uma experiência de usuário interativa e responsiva.
